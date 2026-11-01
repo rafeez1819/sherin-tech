@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sherin News Globe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="news.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">S</div>
+          <span class="brand-name">Sherin News</span>
+        </div>
+        <a href="index.html" class="back-link">← Back to Sherin Tech</a>
+      </header>
+
+      <main class="news-layout">
+        <section class="globe-panel">
+          <div class="globe-header">
+            <p class="eyebrow">Global news</p>
+            <h1>Where do you want to hear the story?</h1>
+          </div>
+
+          <div class="globe-wrap">
+            <div class="globe" id="globe" aria-label="Interactive geographic news globe">
+              <div class="globe-ring ring-one"></div>
+              <div class="globe-ring ring-two"></div>
+              <div class="globe-ring ring-three"></div>
+
+              <button class="location-dot" data-location="london" style="--x: 52%; --y: 39%;">London</button>
+              <button class="location-dot" data-location="new-york" style="--x: 28%; --y: 42%;">New York</button>
+              <button class="location-dot" data-location="dubai" style="--x: 57%; --y: 48%;">Dubai</button>
+              <button class="location-dot" data-location="tokyo" style="--x: 77%; --y: 38%;">Tokyo</button>
+              <button class="location-dot" data-location="sydney" style="--x: 83%; --y: 73%;">Sydney</button>
+              <button class="location-dot" data-location="lagos" style="--x: 48%; --y: 58%;">Lagos</button>
+              <button class="location-dot" data-location="brazil" style="--x: 35%; --y: 70%;">Brazil</button>
+              <button class="location-dot" data-location="delhi" style="--x: 67%; --y: 46%;">Delhi</button>
+            </div>
+          </div>
+
+          <div class="search-bar">
+            <input id="locationInput" type="text" placeholder="Type a city or country" aria-label="Search location" />
+            <button id="searchButton" type="button">Open</button>
+          </div>
+        </section>
+
+        <aside class="news-panel">
+          <div class="panel-topline">
+            <p class="eyebrow">Now playing</p>
+            <span id="liveTag" class="live-tag">Live</span>
+          </div>
+
+          <div class="headline-block">
+            <h2 id="locationName">London</h2>
+            <p id="locationSummary">Global markets, policy updates, and city-level developments shaping the day.</p>
+          </div>
+
+          <ul id="newsList" class="news-list" aria-live="polite"></ul>
+        </aside>
+      </main>
+    </div>
+
+    <script src="news.js"></script>
+  </body>
+</html>
